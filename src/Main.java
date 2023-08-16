@@ -6,8 +6,8 @@ public class Main {
         task4();
         task5();
         task6();
-        task7();/*
-        task8();*/
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -91,15 +91,29 @@ public class Main {
 
     public static void task7() {
         System.out.println("Task 7");
-            int friday = 1; //указали число первой пятницы
-            int month = 1;
-            while (month <= 31) {
-                if (month == friday) {
-                    System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет\n", month);
-                    friday = friday + 7;
-                }
-                month++;
+        int friday = 1; //указали число первой пятницы
+        int month = 1;
+        while (month <= 31) {
+            if (month == friday) {
+                System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет\n", month);
+                friday = friday + 7;
+            }
+            month++;
         }
         System.out.println();
+    }
+
+    public static void task8() {
+        System.out.println("Task 8");
+        int year = 0;
+        int cometYear = 79;
+        int twoHundredYearsAgo = 1823;
+        int hundredYearsAhead = 2123;
+        while (year <= hundredYearsAhead) {
+            if ((year % cometYear == 0) && (year >= twoHundredYearsAgo) && (year <= hundredYearsAhead)) { //считаем каждый 79-й год за последние 200 лет и на 100 лет вперёд
+                System.out.println(year);
+            }
+            year++;
+        }
     }
 }
