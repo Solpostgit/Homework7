@@ -4,8 +4,8 @@ public class Main {
         task2();
         task3();
         task4();
-        task5();/*
-        task6();
+        task5();
+        task6();/*
         task7();
         task8();*/
     }
@@ -66,6 +66,20 @@ public class Main {
         int month = 0;
         float salary = 15000f;
         while (salary < 12000000) {
+            salary = (salary + ((salary / 100) * 7));
+            month++;
+            if (month % 6 == 0) { //вывод накоплений каждый 6-й месяц
+                System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей \n", month, salary);
+            }
+        }
+        System.out.println();
+    }
+
+    public static void task6() {
+        System.out.println("Task 6");
+        int month = 0;
+        float salary = 15000f;
+        while (month < 108) { // считает накопления в течение 9 лет
             salary = (salary + ((salary / 100) * 7));
             month++;
             if (month % 6 == 0) { //вывод накоплений каждый 6-й месяц
