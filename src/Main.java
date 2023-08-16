@@ -2,8 +2,8 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
-        task3();/*
-        task4();
+        task3();
+        task4();/*
         task5();
         task6();
         task7();
@@ -45,6 +45,18 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             population = ((population / 1000 * (fertility - mortality)) + population);
             System.out.printf("Год %d, численность населения составляет %d\n", i, population);
+        }
+        System.out.println();
+    }
+
+    public static void task4() {
+        System.out.println("Task 4");
+        int month = 0;
+        float salary = 15000f;
+        while (salary < 12000000) {
+            salary = (salary + ((salary / 100) * 7));
+            month++;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей \n", month, salary);
         }
         System.out.println();
     }
