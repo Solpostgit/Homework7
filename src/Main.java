@@ -5,8 +5,8 @@ public class Main {
         task3();
         task4();
         task5();
-        task6();/*
-        task7();
+        task6();
+        task7();/*
         task8();*/
     }
 
@@ -85,6 +85,20 @@ public class Main {
             if (month % 6 == 0) { //вывод накоплений каждый 6-й месяц
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей \n", month, salary);
             }
+        }
+        System.out.println();
+    }
+
+    public static void task7() {
+        System.out.println("Task 7");
+            int friday = 1; //указали число первой пятницы
+            int month = 1;
+            while (month <= 31) {
+                if (month == friday) {
+                    System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчет\n", month);
+                    friday = friday + 7;
+                }
+                month++;
         }
         System.out.println();
     }
